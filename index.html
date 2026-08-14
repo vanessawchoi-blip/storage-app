@@ -327,12 +327,12 @@
                         <div className="flex-1 space-y-2">
                             <label className="text-[10px] font-bold text-gray-400 uppercase mb-1 block ml-1">容器外觀</label>
                             <ImageUploader image={image} onImageChange={setImage} label="外觀照片" subLabel="櫃子/盒子" />
-                            <input value={name} onChange={e => setName(e.target.value)} className="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-indigo-500" placeholder="例：透明整理箱、玄關鞋櫃" />
+                            <input value={name} onChange={e => setName(e.target.value)} className="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 text-sm outline-none focus:ring-2 focus:ring-indigo-500" placeholder="例：透明整理箱、玄關鞋櫃" />
                         </div>
                         <div className="flex-1 space-y-2">
                             <label className="text-[10px] font-bold text-gray-400 uppercase mb-1 block ml-1">存放位置</label>
                             <ImageUploader image={locationImage} onImageChange={setLocationImage} label="位置照片" subLabel="放在哪裡" />
-                            <input value={location} onChange={e => setLocation(e.target.value)} className="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-indigo-500" placeholder="例：主臥衣櫃頂層" />
+                            <input value={location} onChange={e => setLocation(e.target.value)} className="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 text-sm outline-none focus:ring-2 focus:ring-indigo-500" placeholder="例：主臥衣櫃頂層" />
                         </div>
                     </div>
                     <div>
@@ -1735,7 +1735,7 @@
                         : <HomeView />}
                     </main>
                     {!selectedContainer && !(activeTab === 'lists' && listsSubView === 'packing' && activePackingListId) && (
-                        <nav className="fixed bottom-3 left-9 right-9 bg-gray-900 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.35)] px-2 py-2 flex justify-around items-center z-40 md:max-w-md md:mx-auto h-16">
+                        <nav className="fixed bottom-3 left-3 right-3 bg-gray-900 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.35)] px-2 py-2 flex justify-around items-center z-40 md:max-w-md md:mx-auto h-16">
                             <button onClick={() => { setActiveTab('browse'); setActiveCategory(null); }} className={`flex flex-col items-center gap-0.5 w-12 ${activeTab === 'browse' ? 'text-indigo-300' : 'text-white/40'}`}><Icon name="Home" size={22} strokeWidth={activeTab === 'browse' ? 2.5 : 2} /></button>
                             <button onClick={() => { setActiveTab('lists'); setActiveCategory(null); }} className={`flex flex-col items-center gap-0.5 w-12 ${activeTab === 'lists' ? 'text-indigo-300' : 'text-white/40'}`}><Icon name="Star" size={22} strokeWidth={activeTab === 'lists' ? 2.5 : 2} /></button>
                             <div className="relative -top-6"><button onClick={() => setActiveTab('find')} className={`flex items-center justify-center w-16 h-16 rounded-full shadow-xl border-4 border-gray-900 transition-transform active:scale-95 ${activeTab === 'find' ? 'bg-indigo-600 text-white' : 'bg-indigo-500 text-white'}`}><Icon name="Search" size={28} strokeWidth={3} /></button></div>
